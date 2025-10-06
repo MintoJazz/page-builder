@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Maker HTML - Manchetes</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main class="container">
+        <header class="container">
+            <article>
+                <h1>Page Maker HTML</h1>
+                <p>Crie uma seção de "Manchetes de Jornal" de forma interativa.</p>
+            </article>
+        </header>
+
+        <div class="grid">
+
+            <aside id="painel-controles">
+                <article>
+                    <header><b>Controles</b></header>
+                    <details open>
+                        <summary>Cabeçalho</summary>
+                        <fieldset>
+                            <label for="header-text">Texto do Cabeçalho</label>
+                            <input type="text" id="texto-header" name="header-text" placeholder="Ex: Jornal Fictício">
+
+                            <label for="header-logo-url">URL da Imagem do Logo</label>
+                            <input type="url" id="header-logo-url" name="header-logo-url"
+                                placeholder="https://exemplo.com/logo.png">
+
+                            <div class="grid">
+                                <div>
+                                    <label for="header-bg-color">Cor de Fundo</label>
+                                    <input type="color" id="header-bg-color" name="header-bg-color" value="#f1f1f1">
+                                </div>
+                                <div>
+                                    <label for="header-text-color">Cor do Texto</label>
+                                    <input type="color" id="header-text-color" name="header-text-color" value="#000000">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </details>
+                    <hr />
+                    <details>
+                        <summary>Seção</summary>
+                        <fieldset>
+                            <label for="main-image-url">URL da Imagem da Seção</label>
+                            <input type="url" id="main-image-url" name="main-image-url"
+                                placeholder="https://exemplo.com/imagem-principal.jpg">
+                        </fieldset>
+                        <fieldset>
+                            <legend><b>Cores</b></legend>
+                            <div class="grid">
+                                <div>
+                                    <label for="headlines-bg-color">Fundo</label>
+                                    <input type="color" id="headlines-bg-color" name="headlines-bg-color"
+                                        value="#ffffff">
+                                </div>
+                                <div>
+                                    <label for="headlines-text-color">Texto</label>
+                                    <input type="color" id="headlines-text-color" name="headlines-text-color"
+                                        value="#333333">
+                                </div>
+                                <div>
+                                    <label for="headlines-border-color">Borda</label>
+                                    <input type="color" id="headlines-border-color" name="headlines-border-color"
+                                        value="#e1e1e1">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </details>
+                    <hr />
+                    <details>
+                        <summary>Manchetes</summary>
+                        <fieldset>
+                            <label for="card-title">Título do Card</label>
+                            <input type="text" id="card-title" name="card-title" placeholder="Nova Notícia Urgente">
+
+                            <label for="card-subtitle">Subtítulo do Card</label>
+                            <input type="text" id="card-subtitle" name="card-subtitle"
+                                placeholder="Detalhes da nova notícia...">
+                            <button type="button" id="add-card-btn" class="outline">Adicionar Card</button>
+                        </fieldset>
+                    </details>
+                    <hr />
+                    <details>
+                        <summary>Rodapé</summary>
+                        <fieldset>
+                            <label for="footer-text">Texto do Rodapé</label>
+                            <input type="text" id="footer-text" name="footer-text" placeholder="© 2025 Seu Jornal">
+
+                            <div class="grid">
+                                <div>
+                                    <label for="footer-bg-color">Fundo</label>
+                                    <input type="color" id="footer-bg-color" name="footer-bg-color" value="#f1f1f1">
+                                </div>
+                                <div>
+                                    <label for="footer-font-color">Fonte</label>
+                                    <input type="color" id="footer-font-color" name="footer-font-color" value="#000000">
+                                </div>
+                                <div>
+                                    <label for="footer-font-size">Tam. (px)</label>
+                                    <input type="number" id="footer-font-size" name="footer-font-size" value="14"
+                                        min="8">
+                                </div>
+                            </div>
+                        </fieldset>
+                    </details>
+                </article>
+
+                <article>
+                    <header><b>Ações da Página</b></header>
+                    <fieldset>
+                        <div role="group">
+                            <button id="save-html">Salvar</button>
+                            <button id="load-html" class="secondary">Carregar</button>
+                            <button id="clear-storage" class="contrast">Limpar</button>
+                        </div>
+                    </fieldset>
+                </article>
+            </aside>
+
+            <article id="generated-content-wrapper">
+                <header id="generated-header">
+                    <nav>
+                        <ul>
+                            <li><img id="header-logo" src="https://via.placeholder.com/150x50.png?text=Logo"
+                                    alt="Logo do Jornal"></li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h1 id="header-title">Jornal Fictício</h1>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <article id="generated-headlines">
+                    <img id="main-headline-image" src="https://via.placeholder.com/800x300.png?text=Manchete+Principal"
+                        alt="Imagem da Manchete Principal">
+
+                    <div id="cards-container" class="grid">
+
+                        <article>
+                            <h2>Notícia de Última Hora</h2>
+                            <p>Um evento inesperado ocorreu no centro da cidade, causando grande comoção.</p>
+                        </article>
+
+                        <article>
+                            <h2>Avanço na Tecnologia</h2>
+                            <p>Pesquisadores anunciam nova descoberta que pode revolucionar o mercado.</p>
+                        </article>
+
+                        <article>
+                            <h2>Dica de Cultura</h2>
+                            <p>Nova exposição de arte abre ao público neste fim de semana. Não perca!</p>
+                        </article>
+
+                    </div>
+                </article>
+
+                <footer id="generated-footer">
+                    <p id="footer-content">© 2025 Seu Jornal. Todos os direitos reservados.</p>
+                </footer>
+            </article>
+        </div>
+    </main>
+</body>
+
+</html>

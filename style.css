@@ -1,0 +1,26 @@
+/* --- ADICIONE ESTE BLOCO NO SEU style.css --- */
+
+/* Estilo para destacar os cards de manchete individuais */
+#cards-container > article {
+  /* Usa as variáveis do Pico para uma borda consistente */
+  border: 1px solid var(--card-border-color);
+  
+  /* Usa as variáveis do Pico para uma sombra sutil, dando profundidade */
+  box-shadow: var(--card-box-shadow);
+  
+  /* Garante um preenchimento interno, caso ele se perca */
+  padding: var(--spacing);
+  
+  /* O grid já cuida do espaçamento externo (margin) */
+  margin-bottom: 0; 
+}
+
+#generated-headlines {
+  /* Remove a sombra que o Pico aplica na tag <article> */
+  box-shadow: none;
+  border: 1px solid var(--card-border-color);
+}
+
+fieldset + fieldset {
+  margin-top: var(--block-spacing-vertical) !important;
+}
