@@ -18,8 +18,8 @@
         </article>
     </header>
 
-    <main class="container-fluid grid">
-        <div id="painel">
+    <main class="container-fluid">
+        <div id="painel" class="grid">
             <article id="controles">
                 <header><b>Controles</b></header>
 
@@ -138,47 +138,50 @@
                 </details>
             </article>
 
-            <article>
-                <header><b>Ações da Página</b></header>
-                <pre>
+            <article id="preview">
+                <header id="preview-header">
+                    <nav>
+                        <ul>
+                            <li>
+                                <img id="preview-url-header" src="" alt="Logo do Jornal" />
+                            </li>
+                        </ul>
+                        <ul>
+                            <li>
+                                <h1 id="preview-texto-header">Jornal Fictício</h1>
+                            </li>
+                        </ul>
+                    </nav>
+                </header>
+
+                <div id="preview-headlines" class="container-fluid">
+                    <img id="preview-url-main" src="" alt="Imagem da Manchete Principal" />
+                    <div id="preview-cards"></div>
+                </div>
+
+                <footer id="preview-footer">
+                    <p id="preview-texto-footer">
+                        © 2025 Seu Jornal. Todos os direitos reservados.
+                    </p>
+                </footer>
+            </article>
+        </div>
+
+
+        <article>
+            <header><b>Ações da Página</b></header>
+            <pre>
                     <code id="view-html">
                         
                     </code>
                 </pre>
-                <fieldset>
+            <fieldset>
+                <div id="action-buttons">
                     <button id="save-html">Salvar</button>
                     <button id="load-html" class="secondary">Carregar</button>
                     <button id="clear-html" class="contrast">Limpar</button>
-                </fieldset>
-            </article>
-        </div>
-
-        <article id="preview">
-            <header id="preview-header">
-                <nav>
-                    <ul>
-                        <li>
-                            <img id="preview-url-header" src="" alt="Logo do Jornal" />
-                        </li>
-                    </ul>
-                    <ul>
-                        <li>
-                            <h1 id="preview-texto-header">Jornal Fictício</h1>
-                        </li>
-                    </ul>
-                </nav>
-            </header>
-
-            <div id="preview-headlines" class="container-fluid">
-                <img id="preview-url-main" src="" alt="Imagem da Manchete Principal" />
-                <div id="preview-cards"></div>
-            </div>
-
-            <footer id="preview-footer">
-                <p id="preview-texto-footer">
-                    © 2025 Seu Jornal. Todos os direitos reservados.
-                </p>
-            </footer>
+                </div>
+            </fieldset>
         </article>
 
         <script type="module" src="./scripts/app.js"></script>
