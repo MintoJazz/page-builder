@@ -9,6 +9,9 @@
     --preview-border-color-manchete: black;
     --preview-border-width-manchete: 1px;
     --preview-bg-color-manchete: white;
+    --preview-font-size-footer: 14px;
+    --preview-bg-color-footer: black;
+    --preview-fg-color-footer: white;
 }
 
 #preview-header {
@@ -35,4 +38,13 @@
 .preview-element-manchete {
     border: solid var(--preview-border-color-manchete) var(--preview-border-width-manchete);
     background-color: var(--preview-bg-color-manchete);
+}
+
+#preview-footer {
+    color: var(--preview-fg-color-footer);
+    background-color: var(--preview-bg-color-footer);
+}
+
+#preview-texto-footer {
+    font-size: var(--preview-font-size-footer);
 }

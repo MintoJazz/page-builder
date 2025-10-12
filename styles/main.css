@@ -25,6 +25,9 @@ article > header > h3 {
 
 #preview-headlines{
     padding: 2em;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1em;
 }
 
 .preview-element-manchete {

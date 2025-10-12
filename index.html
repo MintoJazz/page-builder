@@ -71,17 +71,20 @@
                         </div>
                         <label for="input-bg-color-main">Fundo</label>
                         <input type="color" id="input-bg-color-main" name="input-bg-color-main" value="#ffffff" />
-                        <label for="input-fg-color-main">Texto</label>
-                        <input type="color" id="input-fg-color-main" name="input-fg-color-main" value="#333333" />
                     </fieldset>
                 </details>
-
+                
                 <hr />
-
+                
                 <!-- Acordeon 3: Estilos globais de cards -->
                 <details>
                     <summary>Estilos globais de cards</summary>
                     <fieldset>
+                        <label for="input-bg-color-manchete">Fundo</label>
+                        <input type="color" id="input-bg-color-manchete" name="input-bg-color-manchete" value="#ffffff" />
+                        <label for="input-fg-color-main">Texto</label>
+                        <input type="color" id="input-fg-color-main" name="input-fg-color-main" value="#333333" />
+
                         <label for="input-border-width-manchete">Borda</label>
                         <div role="group">
                             <input type="number" id="input-border-width-manchete" name="input-border-width-manchete"
@@ -109,21 +112,21 @@
                 <details>
                     <summary>Rodapé</summary>
                     <fieldset>
-                        <label for="footer-text">Texto do Rodapé</label>
-                        <input type="text" id="footer-text" name="footer-text" placeholder="© 2025 Seu Jornal" />
+                        <label for="input-texto-footer">Texto do Rodapé</label>
+                        <input type="text" id="input-texto-footer" name="input-texto-footer" placeholder="© 2025 Seu Jornal" />
 
                         <div class="grid">
                             <div>
-                                <label for="footer-bg-color">Fundo</label>
-                                <input type="color" id="footer-bg-color" name="footer-bg-color" value="#f1f1f1" />
+                                <label for="input-bg-color-footer">Fundo</label>
+                                <input type="color" id="input-bg-color-footer" name="input-bg-color-footer" value="#f1f1f1" />
                             </div>
                             <div>
-                                <label for="footer-font-color">Fonte</label>
-                                <input type="color" id="footer-font-color" name="footer-font-color" value="#000000" />
+                                <label for="input-fg-color-footer">Fonte</label>
+                                <input type="color" id="input-fg-color-footer" name="input-bg-color-footer" value="#000000" />
                             </div>
                             <div>
-                                <label for="footer-font-size">Tam. (px)</label>
-                                <input type="number" id="footer-font-size" name="footer-font-size" value="14" min="8" />
+                                <label for="input-font-size-footer">Tam. (px)</label>
+                                <input type="number" id="input-font-size-footer" name="input-font-size-footer" value="14" min="8" />
                             </div>
                         </div>
                     </fieldset>
@@ -132,11 +135,16 @@
 
             <article>
                 <header><b>Ações da Página</b></header>
+                <pre>
+                    <code id="view-html">
+                        
+                    </code>
+                </pre>
                 <fieldset>
                     <div role="group">
                         <button id="save-html">Salvar</button>
                         <button id="load-html" class="secondary">Carregar</button>
-                        <button id="clear-storage" class="contrast">Limpar</button>
+                        <button id="clear-html" class="contrast">Limpar</button>
                     </div>
                 </fieldset>
             </article>
@@ -147,7 +155,7 @@
                 <nav>
                     <ul>
                         <li>
-                            <img id="preview-url-header" src="https://via.placeholder.com/150x50.png?text=Logo"
+                            <img id="preview-url-header" src=""
                                 alt="Logo do Jornal" />
                         </li>
                     </ul>
@@ -160,13 +168,13 @@
             </header>
 
             <div id="preview-headlines" class="container-fluid">
-                <img id="preview-url-main" src="https://via.placeholder.com/800x300.png?text=Manchete+Principal"
+                <img id="preview-url-main" src=""
                     alt="Imagem da Manchete Principal" />
                 <div id="preview-cards"></div>
             </div>
 
             <footer id="preview-footer">
-                <p id="preview-footer-content">
+                <p id="preview-texto-footer">
                     © 2025 Seu Jornal. Todos os direitos reservados.
                 </p>
             </footer>
