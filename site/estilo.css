@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Teko:wght@500&display=swap');
+
+:root {
+    --editor-bg: #f8f9fa;
+    --preview-bg: #e9ecef;
+    --border-color: #dee2e6;
+    --primary-accent: #0d6efd;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: 'Roboto', sans-serif;
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+}
+
+#editor-column {
+    background-color: var(--editor-bg);
+    padding: 2rem;
+    border-right: 1px solid var(--border-color);
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#preview-column {
+    background-color: var(--preview-bg);
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+h1, h2 {
+    font-family: 'Teko', sans-serif;
+    font-weight: 500;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.color-input-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.color-input-wrapper input[type="color"] {
+    width: 50px;
+    height: 38px;
+    padding: 0.2rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.color-input-wrapper input[type="text"] {
+    flex-grow: 1;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--primary-accent);
+    color: white;
+}
+
+/* Estilos da Área de Visualização */
+#journal-section-preview {
+    width: 100%;
+    max-width: 750px;
+    background-color: #ffffff;
+    border: 1px solid #ced4da;
+    padding: 20px;
+    overflow: hidden; /* Garante que não haja overflows */
+    transition: all 0.2s ease-in-out;
+}
+
+#preview-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+#card-container-preview {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.headline-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    padding: 15px;
+    overflow: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.headline-card h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #212529;
+}
+
+.headline-card p {
+    margin: 0;
+    font-size: 1rem;
+    color: #495057;
+}
+
+/* Estilos do Editor de Card Individual */
+.card-editor-item {
+    border: 1px solid var(--border-color);
+    border-radius: 0.375rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: white;
+}

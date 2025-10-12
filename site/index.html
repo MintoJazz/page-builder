@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Manchetes de Jornal</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./estilo.css">
+</head>
+<body>
+
+    <main class="container-fluid p-0">
+        <div class="row g-0">
+            <div id="editor-column" class="col-lg-6">
+                <header class="mb-4">
+                    <h1>Editor de Manchetes</h1>
+                    <p class="text-muted">Personalize a seção de manchetes do jornal em tempo real.</p>
+                </header>
+
+                <div class="accordion" id="editorAccordion">
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                1. Configurações Gerais da Seção
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#editorAccordion">
+                            <div class="accordion-body">
+                                <div class="form-group">
+                                    <label for="section-bg-color">Cor de Fundo da Seção</label>
+                                    <div class="color-input-wrapper">
+                                        <input type="color" id="section-bg-color" class="form-control form-control-color" value="#FFFFFF">
+                                        <input type="text" id="section-bg-color-text" class="form-control" value="#FFFFFF">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="section-border-width">Largura da Borda (px)</label>
+                                    <input type="number" id="section-border-width" class="form-control" value="1" min="0" max="20">
+                                </div>
+                                <div class="form-group">
+                                    <label for="section-border-color">Cor da Borda</label>
+                                     <div class="color-input-wrapper">
+                                        <input type="color" id="section-border-color" class="form-control form-control-color" value="#ced4da">
+                                        <input type="text" id="section-border-color-text" class="form-control" value="#ced4da">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                2. Imagem Superior
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#editorAccordion">
+                            <div class="accordion-body">
+                                <div class="form-group">
+                                    <label for="image-url">URL da Imagem</label>
+                                    <input type="url" id="image-url" class="form-control" value="https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1740&auto=format&fit=crop">
+                                </div>
+                                <div class="form-group">
+                                    <label for="image-height">Altura da Imagem (px)</label>
+                                    <input type="number" id="image-height" class="form-control" value="250" min="50" max="800">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                3. Gerenciar Cards de Manchete
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#editorAccordion">
+                            <div class="accordion-body">
+                                <div id="card-editors-container">
+                                    </div>
+                                <button id="add-card-btn" class="btn btn-primary mt-3">Adicionar Nova Manchete</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                4. Estilos Globais dos Cards
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#editorAccordion">
+                            <div class="accordion-body">
+                                <div class="form-group">
+                                    <label for="card-bg-color">Cor de Fundo dos Cards</label>
+                                    <div class="color-input-wrapper">
+                                        <input type="color" id="card-bg-color" class="form-control form-control-color" value="#f8f9fa">
+                                        <input type="text" id="card-bg-color-text" class="form-control" value="#f8f9fa">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-border-width">Largura da Borda (px)</label>
+                                    <input type="number" id="card-border-width" class="form-control" value="1" min="0" max="10">
+                                </div>
+                                <div class="form-group">
+                                    <label for="card-border-color">Cor da Borda</label>
+                                    <div class="color-input-wrapper">
+                                        <input type="color" id="card-border-color" class="form-control form-control-color" value="#dee2e6">
+                                        <input type="text" id="card-border-color-text" class="form-control" value="#dee2e6">
+                                    </div>
+                                </div>
+                                 <div class="form-group">
+                                    <label for="card-border-radius">Raio da Borda (px)</label>
+                                    <input type="number" id="card-border-radius" class="form-control" value="0" min="0" max="50">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingFive">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                5. Estilos Globais de Texto
+                            </button>
+                        </h2>
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#editorAccordion">
+                            <div class="accordion-body">
+                                <h5>Título</h5>
+                                <div class="form-group">
+                                    <label for="title-color">Cor do Título</label>
+                                    <div class="color-input-wrapper">
+                                        <input type="color" id="title-color" class="form-control form-control-color" value="#212529">
+                                        <input type="text" id="title-color-text" class="form-control" value="#212529">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="title-font-size">Tamanho da Fonte (rem)</label>
+                                    <input type="number" id="title-font-size" class="form-control" value="1.25" min="0.5" max="3" step="0.05">
+                                </div>
+                                 <div class="form-group">
+                                    <label for="title-font-weight">Peso da Fonte</label>
+                                    <select id="title-font-weight" class="form-select">
+                                        <option value="400">Normal</option>
+                                        <option value="700" selected>Negrito (Bold)</option>
+                                        <option value="300">Leve (Light)</option>
+                                    </select>
+                                </div>
+                                <hr>
+                                <h5>Subtítulo</h5>
+                                 <div class="form-group">
+                                    <label for="subtitle-color">Cor do Subtítulo</label>
+                                    <div class="color-input-wrapper">
+                                        <input type="color" id="subtitle-color" class="form-control form-control-color" value="#495057">
+                                        <input type="text" id="subtitle-color-text" class="form-control" value="#495057">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="subtitle-font-size">Tamanho da Fonte (rem)</label>
+                                    <input type="number" id="subtitle-font-size" class="form-control" value="1" min="0.5" max="2.5" step="0.05">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="preview-column" class="col-lg-6">
+                <div id="journal-section-preview">
+                    <img id="preview-image" src="https://images.unsplash.com/photo-1495020689067-958852a7765e?q=80&w=1740&auto=format&fit=crop" alt="Manchete principal do jornal">
+                    <div id="card-container-preview">
+                        </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script type="module" src="./app.js"></script>
+</body>
+</html>

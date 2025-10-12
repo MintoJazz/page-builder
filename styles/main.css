@@ -1,0 +1,42 @@
+@import "./variaveis.css";
+
+article > header > h3 {
+    margin: 0;
+}
+
+#preview {
+    padding: 0em;
+    height: fit-content
+}
+
+#preview-header {
+    margin: 0 !important;
+    padding: 1em 2em;
+} 
+
+#preview-texto-header {
+    margin-bottom: 0;
+}
+
+#preview-footer {
+    margin: 0 !important;
+    padding: 1em 2em;
+}
+
+#preview-headlines{
+    padding: 2em;
+}
+
+.preview-element-manchete {
+    padding: 1em;
+}
+
+#preview-url-header {
+    max-height: 5em;
+}
+
+#preview-url-main {
+    width: 100%;
+    object-fit: cover;
+    display: block; /* Remove espaço extra abaixo da imagem */
+}

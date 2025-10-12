@@ -1,0 +1,38 @@
+:root {
+    --preview-bg-header-preview: black;
+    --preview-fg-header-preview: white;
+    --preview-fg-color-main: black;
+    --preview-bg-color-main: white;
+    --preview-border-color-main: black;
+    --preview-border-width-main: 1px;
+    --preview-url-heigth-main: 250px;
+    --preview-border-color-manchete: black;
+    --preview-border-width-manchete: 1px;
+    --preview-bg-color-manchete: white;
+}
+
+#preview-header {
+    background-color: var(--preview-bg-header-preview) !important;
+}
+
+#preview-texto-header {
+    color: var(--preview-fg-header-preview) !important;
+}
+
+#preview-headlines {
+    border: solid var(--preview-border-color-main) var(--preview-border-width-main) !important;
+    background-color: var(--preview-bg-color-main);
+}
+
+#preview-headlines * {
+    color: var(--preview-fg-color-main);
+}
+
+#preview-url-main {
+    height: var(--preview-url-heigth-main);
+}
+
+.preview-element-manchete {
+    border: solid var(--preview-border-color-manchete) var(--preview-border-width-manchete);
+    background-color: var(--preview-bg-color-manchete);
+}
